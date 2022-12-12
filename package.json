@@ -1,0 +1,25 @@
+{
+  "name": "blog-site",
+  "version": "1.0.0",
+  "description": "This is a blog site created with:\r Node.JS as the server-side runtime,\r Express,\r EJS as the view engine,\r MongoDB as the database for storing the blogs.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aytheotaku/Blog-Site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aytheotaku/Blog-Site/issues"
+  },
+  "homepage": "https://github.com/aytheotaku/Blog-Site#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
