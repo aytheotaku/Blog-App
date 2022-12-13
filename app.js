@@ -1,6 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+//
+const databaseConnectionString = 'mongodb+srv://aytheotaku:stardustcrusaders123@nodecluster.xpuvq9k.mongodb.net/BlogsDatabase?retryWrites=true&w=majority'
+
+mongoose.set('strictQuery', true);
+
+mongoose.connect(databaseConnectionString)
+    .then(() => {
+        console.log('database connected')
+        app.listen(3000, ()=> console.log(`listening on port 3000`));
+    })
+    .catch(err => console.log(`An error occured: ${err}`));
+
 const app = express();
 
 // setting ejs as view engine
@@ -17,4 +29,3 @@ app.get('/blogs/add-blog', (req, res) => {
 })
 
 
-app.listen(3000, ()=> console.log(`listening on port 3000`))
