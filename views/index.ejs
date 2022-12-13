@@ -10,7 +10,7 @@
     <% if (blogs.length > 0) { %>
       <% blogs.forEach(blog => { %>
 
-        <a href="/blogs<%=blog.id%> "><div class="separation">
+        <a href="/blogs/<%=blog.id%> "><div class="separation">
 
             <h3 class="title"><%= blog.blogTitle %></h3>
             <p class="snippet"><%= blog.blogSnippet %></p>    
