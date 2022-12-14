@@ -3,16 +3,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const blogModel = require('./models/blogModel.js');
+require('dotenv').config()
 
 //database connection string
-const databaseConnectionString = 'mongodb+srv://aytheotaku:stardustcrusaders123@nodecluster.xpuvq9k.mongodb.net/BlogsDatabase?retryWrites=true&w=majority'
+const databaseConnectionString = process.env.DATABASE_CONNECTION_STRING
 
 mongoose.set('strictQuery', true);
 
 mongoose.connect(databaseConnectionString)
     .then(() => {
         console.log('database connected')
-        app.listen(3000, ()=> console.log(`listening on port 3000`));
+        app.listen(process.env.PORT || 3000, ()=> console.log('listening on port 3000'));
     })
     .catch(err => console.log(`An error occured: ${err}`));
 
