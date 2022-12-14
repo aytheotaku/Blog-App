@@ -2,14 +2,16 @@ const btn = document.getElementById('deleteBlog');
 
 btn.addEventListener('click', () => {
     
-    fetch(`http://localhost:3000/blogs/${btn.dataset.blogid}`, {
+    fetch(`/blogs/${btn.dataset.blogid}`, {
         method: "DELETE",
     })
-        .then((res) => {
-            console.log(`reached server succesfully`)
-            window.location.replace('http://localhost:3000/blogs/')
+        .then(result => result.json())
+        .then(data => {
+            window.location.replace(`${data.urlRedirect}`)
         })
-        .catch(err => console.log(err))
-   
 
 })
+
+
+
+
