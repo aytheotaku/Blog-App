@@ -25,6 +25,9 @@ app.set('view-engine', 'ejs')
 
 app.use(express.json());
 
+//using static files
+app.use(express.static('public'));
+
 //using body parser middleware
 app.use(bodyParser.urlencoded({extended: false}))
 
@@ -60,7 +63,6 @@ app.post('/blogs/add-blog', (req, res) => {
 
     blog.save()
         .then(() => {
-            console.log('data succesfully added')
             res.redirect('/blogs')
         })
         .catch(err => console.log(err))
@@ -74,6 +76,18 @@ app.get('/blogs/:id' , (req, res) => {
     })
     .catch(err => console.log(err)) 
 })
+
+app.delete('/blogs/:id' , (req, res) => {
+    blogModel.findByIdAndRemove(req.params.id)
+        .then(result =>{
+            console.log('data removed')
+            console.log(result)
+            res.redirect('/blogs')
+        })
+        .catch(err => console.log(err))
+
+})
+ 
 
 
 
