@@ -82,7 +82,7 @@ app.delete('/blogs/:id' , (req, res) => {
         .then(result =>{
             console.log('data removed')
             console.log(result)
-            res.redirect('/blogs')
+            res.json({ urlRedirect: '/blogs' })
         })
         .catch(err => console.log(err))
 
