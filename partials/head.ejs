@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayomide's Blog | <%= pageTitle %></title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
       body{
         max-width: 1200px;
         margin: 20px auto;
@@ -11,6 +11,9 @@
         font-family: 'Oswald', sans-serif;
         max-width: 1200px;
       }
+
+      
+
       p, h1, h2, h3, a, ul{
         margin: 0;
         padding: 0;
@@ -33,7 +36,7 @@
         margin: 5px;
         padding: 15px;
         text-align: center;
-        cursor: pointer;
+        cursor:pointer;
       }
 
       .separation:hover{
@@ -50,6 +53,7 @@
       .snippet{
         width: 50%;
         margin: 0 auto;
+      
         
       }
 
@@ -126,6 +130,38 @@
         cursor: pointer;
       }
 
+
+      a.my-button{
+  background-color: rgba(158, 39, 39, 0.818);
+  color: black;
+  font-family: Trebuchet MS;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 14px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+a.my-button:hover{
+ background-color: red;
+ cursor: pointer;
+ transition: 0.3s;
+}
+a.my-button:active{
+ transform: scale(0.95);
+}
+
+.btn:hover{
+  background-color: rgb(35, 85, 35);
+  color: black;
+  transition: 0.3s;
+}
     </style>
   </head>
 
