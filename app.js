@@ -75,7 +75,9 @@ app.get('/blogs/:id' , (req, res) => {
     .then(result => {
         res.render('about-blog.ejs', {pageTitle: 'Blog', blog: result})
     })
-    .catch(err => console.log(err)) 
+    .catch(err => {
+        res.status(404).render('404.ejs', {pageTitle : "404 page"})
+    }) 
 })
 
 app.delete('/blogs/:id' , (req, res) => {
