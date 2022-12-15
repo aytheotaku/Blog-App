@@ -9,6 +9,7 @@
     <br />
     <p><%= blog.blogBody  %> </p>
     <a class="my-button" id="deleteBlog" data-blogid="<%=blog.id %>"><p>Delete Blog</p> </a>
+    <a class="my-button-edit" href="/blogs/edit-blog/<%=blog.id %> "id="editBlog" data-blogid="<%=blog.id %>"><p>Edit Blog</p> </a>
   </div>
 
 <script src="../clientSide.js"></script>
