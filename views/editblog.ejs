@@ -1,0 +1,20 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="create-blog content">
+    <form action="/blogs/edit-blog/<%=blog.id%>" method="POST">
+      <label for="title">Edit your awesome blog title:</label>
+      <input type="text" id="title" value="<%= blog.blogTitle %>" name="blogTitle" required>
+      <label for="snippet">Edit your blog snippet:</label>
+      <input type="text" id="snippet" value="<%= blog.blogSnippet %> " name="blogSnippet" required>
+      <label for="body">Edit your blog:</label>
+      <textarea id="body" name="blogBody" required><%=blog.blogBody %></textarea>
+      <button class="edit-btn">DONE EDITING</button>
+    </form>
+  </div>
+
+</body>
+</html>
