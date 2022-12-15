@@ -13,9 +13,9 @@
 #
 
 ## DEMO
-I have hosted the app using cyclic (heroku's free tier's over sadly) and you can find the site in the __About__ section of this repository.
+I have hosted the app using cyclic (heroku's free tier's over sadly) and you can find the site in the __About__ section of this repository. You can Create, Read, Edit and Delete blog posts.
 
-![Demo Video](/reel.gif)
+![Demo Video](/blog-app-reel.gif)
 
 #
 
@@ -95,6 +95,6 @@ This contains static files the project needs, in this case, client side script I
 # HOW TO USE FOR YOURSELF.
 *  This project is connected to my MongoDB database collection, right now, a person who goes to the site the web app is hosted on can add or remove blogs as the person pleases. If you would like to recreate this using your own MongoDB database, you can simply fork this, then take a look at the .env_example file, create your own .env file and set the value of the DATABASE_CONNECTION_STRING to the connection string of your own MongoDB database.
 <br/><br />
-Feel free to also do stuff like going to views/partials/nav.ejs and changing the name of header tag to yours. 
+Feel free to also do stuff like going to views/partials/nav.ejs and views/partials/head.ejs and changing the name of header tag and title to yours. 
 
-    ![fun edit](/fun-edit.gif)
+    ![fun edit](/fun-customization.gif)
