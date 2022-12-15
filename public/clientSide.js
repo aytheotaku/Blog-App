@@ -9,9 +9,6 @@ btn.addEventListener('click', () => {
         .then(data => {
             window.location.replace(`${data.urlRedirect}`)
         })
+        .catch(err => console.log(err))
 
 })
-
-
-
-
