@@ -30,6 +30,7 @@
         padding-bottom: 10px;
         border-bottom: 1px solid #ddd;
         text-transform: uppercase;
+       
       }
 
       .separation{
@@ -49,6 +50,7 @@
       .title{
         width: 50%;
         margin: 0 auto;
+        
         
       }
       .snippet{
@@ -198,6 +200,64 @@ a.my-button:active{
     font-size: 2rem;
  
 }
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+   nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title{
+    color: red;
+  }
+
+}
+
+@media screen and (max-width: 545px) {
+
+
+.title{
+  color: green;
+}
+
+.separation{
+  margin: 0 auto;
+}
+
+.content{
+  padding: 1px;
+}
+
+}
+
+@media screen and (max-width: 416px) {
+
+h1{
+  text-align: center;
+}
+.title{
+  color: blue;
+}
+
+.separation{
+  margin: 0 auto;
+}
+
+.content{
+  padding: 1px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+}
+
+
 
     </style>
   </head>
